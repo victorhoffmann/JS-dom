@@ -1,0 +1,190 @@
+* {
+    font-family: arial;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-size: 18px;
+  }
+  
+  body.contact-body {
+    background-image: url('../img/bg.jpg');
+    background-size: cover;
+  }
+  
+  /* -- General Area End -- */
+  
+  /* -- Header Area Begin -- */
+  
+  header a {
+    text-decoration: none;
+    color: #000;
+  }
+  
+  header a:hover {
+    color: #5f4a90;
+    text-decoration: underline;
+  }
+  
+  header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    box-shadow: 0 0 8px 0 #676565;
+  }
+  
+  header .logo-content {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  header .logo-content img {
+    width: 10%;
+  }
+  
+  header .container {
+    width: 40%;
+    display: flex;
+    align-items: center;
+  }
+  
+  header .container ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  header .container ul li {
+    list-style: none;
+  }
+  
+  header .container ul .toggle-menu {
+    color: purple;
+    display: none;
+  }
+
+  /* MAIN */
+
+  #formContato {
+    width: 40%;
+    margin: 20vh auto;
+    background: #FFFFFF;
+    box-sizing: border-box;
+    border: 1px solid #5f4a90;
+    border-radius: 10px;
+  }
+
+  #formContato h2 {
+    font-size: 40px;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+
+  .labelNames {
+    margin-left: 8%;
+  }
+
+  .inputNameEmail {
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    border-radius: 20px;
+    height: 25px;
+    border: 1px solid #5f4a90;
+  }
+
+  #inputText {
+    height: 100px;
+  }
+
+  #finalContato {
+    margin-bottom: 10px;
+  }
+
+  #btnSend {
+    border: none;
+    background-color: #5f4a90;
+    border-radius: 20px;
+    padding: 10px 50px;
+    font-size: 20px;
+    color: #fff;
+    margin-right: 5%;
+  }
+
+  #finalContato  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #finalContatoCheckBox{
+    margin-left: 8%;
+  }
+
+  #finalContatoBtn {
+    margin-right: 5%;
+  }
+ 
+  /* FOOTER */
+
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    margin-top: 20px;
+    background-color: #5f4a90;
+    }
+  
+    footer p{
+    color: #fff ;
+    }
+
+  @media only screen and (max-width: 540px){
+
+    html {
+      width: 100vw;
+    }
+  
+    header {
+      z-index: 2;
+      height: 10vh;
+    }
+  
+    header .container {
+      width: 50%;
+    }
+  
+    header .container ul {
+      display: flex;
+      justify-content: flex-end;
+      margin-right: 10%;
+    }
+  
+    header .container ul li:not(.toggle-menu) {
+      display: none;
+    }
+  
+    header .container ul .toggle-menu {
+      display: block;
+      font-size: 1.3em;
+    }
+  
+    header .logo-content {
+      width: 45%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+  
+    header .logo-content img {
+      width: 20%;
+    }
+}

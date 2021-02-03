@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <link rel="stylesheet" href="../css/contact.css">
+</head>
+<body class='contact-body'>
+    <header>
+        <div class="logo-content">
+          <img src="../img/logo.png" alt="logo do site">
+          <span>Landseeker</span>
+        </div>
+        <div class="container">
+          <ul>
+            <li class="toggle-menu"><a href="#">&#9776;</a></li>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="./pages/contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </header>
+
+      <main>
+        <div id="formContato">
+            <h2>Contact Us!</h2>
+            <form>
+                <label for="name" class='labelNames'>Name</label><br>
+                <input type="text" class='inputNameEmail' name="name"><br>
+                <label for="email" class='labelNames'>E-mail</label><br>
+                <input type="text" class='inputNameEmail' name="email"><br>
+                <label for="message" class='labelNames'>Message</label></br>
+                <textarea class='inputNameEmail' id='inputText' name="message"></textarea></br>
+                <div id=finalContato>
+                    <div id='finalContatoCheckBox'>
+                        <input type="checkbox" id="postName" name="postName">
+                        <label id='postNameText' for="postName">Don't post my name</label>
+                    </div>
+                    <div id='finalContatoBtn'>    
+                        <input type="submit" id='btnSend' value="Send">
+                    </div>
+                </div>
+            </form>            
+        </div>
+      </main>
+
+      <footer>
+        <p>Copyright &copy; Digital House</p>
+      </footer>
+</body>
+</html>
