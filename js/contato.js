@@ -17,7 +17,7 @@
 // } 
 
 
-document.querySelector('form').onsubmit = function () {
+document.querySelector('form').onsubmit = function (e) {
     let erros = [];
 
     let nome = document.querySelector('#nome');
@@ -25,13 +25,22 @@ document.querySelector('form').onsubmit = function () {
     let message = document.querySelector('#descricao');
 
     if (nome.value === ''){
-        erros.push({'nome': 'Campo nome precisa ser preenchido!'})
+        erros.push({'elemento' : 'nome', 'mensagem' : 'Campo nome precisa ser preenchido!'})
     } 
     if (email.value === '') {
-        erros.push({'email': 'Campo email precisa ser preenchido!'})
+        erros.push({'elemento' : 'email', 'mensagem' : 'Campo email precisa ser preenchido!'})
     } 
     if (message.value === '') {
-        erros.push({'message': 'Campo message precisa ser preenchido!'})
+        erros.push({'elemento' : 'descricao', 'mensagem' : 'Campo message precisa ser preenchido!'})
     }
-    console.log(erros)
-}   
+    if (erros.length > 0){
+        e.preventDefault()
+        erros.forEach( (erro) => {
+            let elemento = document.getElementById(erro.elemento)
+            elemento.style.borderColor = 'red';
+            let p = document.createElement('p');
+            p.innerHTML = erro.mensagem
+            document.getElementById('erros').appendChild(p)
+        })
+    }
+}
